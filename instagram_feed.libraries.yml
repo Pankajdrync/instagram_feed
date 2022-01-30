@@ -1,0 +1,5 @@
+instagram_feed:
+  version: VERSION
+  css:
+    theme:
+      css/instagram_feed.css: {}

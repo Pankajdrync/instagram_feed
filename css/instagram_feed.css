@@ -1,0 +1,76 @@
+.insta-feed-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .insta-feed-items {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}
+
+.insta-feed-items * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.insta-feed-items .item_box {
+  width: 50%;
+  padding: 5px;
+}
+
+@media screen and (min-width: 480px) {
+  .insta-feed-items .item_box {
+    width: 33.3333%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .insta-feed-items .item_box {
+    width: 25%;
+    padding: 8px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .insta-feed-items .item_box {
+    width: 20%;
+  }
+}
+
+.insta-feed-items .item_box a {
+  position: relative;
+  display: block;
+  padding: 0 0 100%;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #f1f1f1;
+}
+
+.insta-feed-items .item_box a img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.insta-feed-items .item_box a:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=instagram_feed.css.map */

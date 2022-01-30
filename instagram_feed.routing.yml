@@ -1,0 +1,24 @@
+instagram_feed.settings:
+  path: '/admin/config/instagramfeed/settings'
+  defaults:
+    _form: '\Drupal\instagram_feed\Form\instagramSettingsForm'
+    _title: 'Instgram Feed count'
+  requirements:
+    _role: 'administrator'
+
+instagram_feed.token_refresh:
+  path: '/admin/config/instagramfeed/token-refresh'
+  defaults:
+    _form: '\Drupal\instagram_feed\Form\instagramTokenRefreshForm'
+    _title: 'Instgram Token Refresh Form'
+  requirements:
+    _role: 'administrator'
+
+instagram_auth.accesstoken:
+  path: '/instagram-auth'
+  defaults:
+    _controller: '\Drupal\instagram_feed\Controller\InstagramAuth::authHandler'
+    _title: 'Instagram Auth'
+  requirements:
+    _access: 'TRUE'
+

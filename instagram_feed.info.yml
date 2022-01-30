@@ -1,0 +1,9 @@
+name: Instagram Feed
+description: Instagram Feed
+package: instagram
+
+type: module
+version: 1.0
+
+core: 8.x
+core_version_requirement: ^8 || ^9
