@@ -4,6 +4,7 @@ namespace Drupal\instagram_feed\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use GuzzleHttp\Exception\ClientException;
+use Drupal\Core\Cache\UncacheableDependencyTrait;
 /**
  * Provides a 'Instagram Feed' Block.
  *
@@ -18,6 +19,7 @@ class InstagramBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
+    \Drupal::service('page_cache_kill_switch')->trigger();
     // Get count and access tokens.
     $count = \Drupal::config('instagram_tokens.settings')->get('feed_count');
     $access_token = \Drupal::config('instagram_tokens.settings')->get('long_token');
@@ -79,7 +81,3 @@ class InstagramBlock extends BlockBase {
     return 0;
   }
 }
-
-
-
-
